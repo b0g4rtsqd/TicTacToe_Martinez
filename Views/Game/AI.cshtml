@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Play with AI";
+}
+
+<div class="game-container">
+    <div class="scoreboard">
+        <div class="player-card">
+            <div class="icon">⭕</div>
+            <div class="player-info">
+                <h3>Player 1</h3>
+                <p id="playerWins">0 wins</p>
+            </div>
+        </div>
+        <div class="turn-indicator" id="turnIndicator">Your turn</div>
+        <div class="player-card">
+            <div class="icon">❌</div>
+            <div class="player-info">
+                <h3>Computer</h3>
+                <p id="aiWins">0 wins</p>
+            </div>
+        </div>
+    </div>
+
+    <table id="board" class="tic-tac-toe-board">
+        <tr>
+            <td onclick="playerMove(0,0)"></td>
+            <td onclick="playerMove(0,1)"></td>
+            <td onclick="playerMove(0,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="playerMove(1,0)"></td>
+            <td onclick="playerMove(1,1)"></td>
+            <td onclick="playerMove(1,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="playerMove(2,0)"></td>
+            <td onclick="playerMove(2,1)"></td>
+            <td onclick="playerMove(2,2)"></td>
+        </tr>
+    </table>
+
+    <button onclick="restartGame()" class="restart-btn">Restart</button>
+</div>
+
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/ai.js"></script>

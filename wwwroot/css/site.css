@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Dark blue gradient */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Game Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #1e1e2e; /* Dark blueish-black */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #ff6b6b; /* Vibrant red */
+}
+
+.btn-secondary {
+    background-color: #4ecdc4; /* Soft cyan */
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Board Styles */
+#board {
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+    #board td {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #333;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 2.5em;
+        font-weight: bold;
+        cursor: pointer;
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        #board td:hover {
+            background-color: #e9ecef;
+            transform: scale(1.05);
+        }
+
+        #board td:active {
+            transform: scale(0.95);
+        }
+
+/* Status Message Styles */
+#status {
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Restart Button Styles */
+.restart-btn {
+    padding: 12px 24px;
+    font-size: 1.1em;
+    color: #fff;
+    background-color: #f77f00;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+    .restart-btn:hover {
+        background-color: #d62828;
+        transform: translateY(-2px);
+    }
+
+    .restart-btn:active {
+        transform: translateY(0);
+    }
+
+/* Winning Cell Highlight */
+.winning-cell {
+    background-color: #aaffaa !important;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Scoreboard */
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 2em;
+    color: #333;
+}
+
+.player-info h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.player-info p {
+    margin: 0;
+    font-size: 1em;
+    color: #777;
+}
+h1, h2, h3, p, #status {
+    color: #fff; /* White text */
+}

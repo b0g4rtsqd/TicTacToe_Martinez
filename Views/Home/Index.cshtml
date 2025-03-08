@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Tic-Tac-Toe";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<h1>Tic-Tac-Toe</h1>
+
+<div class="scoreboard">
+    <div class="player-card">
+        <div class="icon">⭕</div>
+        <div class="player-info">
+            <h3>Player 1</h3>
+            <p id="player1Wins">0 wins</p>
+        </div>
+    </div>
+    <div class="turn-indicator" id="turnIndicator">Your turn</div>
+    <div class="player-card">
+        <div class="icon">❌</div>
+        <div class="player-info">
+            <h3>Player 2</h3>
+            <p id="player2Wins">0 wins</p>
+        </div>
+    </div>
+</div>
+
+<table id="board">
+    <tr>
+        <td onclick="makeMove(0,0)"></td>
+        <td onclick="makeMove(0,1)"></td>
+        <td onclick="makeMove(0,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(1,0)"></td>
+        <td onclick="makeMove(1,1)"></td>
+        <td onclick="makeMove(1,2)"></td>
+    </tr>
+    <tr>
+        <td onclick="makeMove(2,0)"></td>
+        <td onclick="makeMove(2,1)"></td>
+        <td onclick="makeMove(2,2)"></td>
+    </tr>
+</table>
+
+<h2 id="status"></h2>
+<button onclick="restartGame()" class="restart-btn">Restart</button>
+
+<script src="~/js/game.js"></script>

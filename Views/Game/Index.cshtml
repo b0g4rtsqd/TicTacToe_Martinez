@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Tic-Tac-Toe";
+}
+<link rel="stylesheet" href="~/css/site.css" />
+<div class="game-container">
+    <h1>Welcome to Tic-Tac-Toe</h1>
+    <div class="button-group">
+        <a href="/Game/AI" class="btn btn-primary">Play with AI</a>
+        <a href="/Game/Multiplayer" class="btn btn-secondary">Multiplayer</a>
+    </div>
+
+    <!-- Scoreboard for Single-Player Mode -->
+    <div class="scoreboard">
+        <div class="player-card">
+            <div class="icon">⭕</div>
+            <div class="player-info">
+                <h3>Player</h3>
+                <p id="playerWins">Wins: 0</p>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="icon">❌</div>
+            <div class="player-info">
+                <h3>Computer</h3>
+                <p id="computerWins">Wins: 0</p>
+            </div>
+        </div>
+        <div class="player-card">
+            <div class="icon">🤝</div>
+            <div class="player-info">
+                <h3>Draws</h3>
+                <p id="draws">Draws: 0</p>
+            </div>
+        </div>
+    </div>
+
+    <table id="board">
+        <tr>
+            <td onclick="makeMove(0,0)"></td>
+            <td onclick="makeMove(0,1)"></td>
+            <td onclick="makeMove(0,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="makeMove(1,0)"></td>
+            <td onclick="makeMove(1,1)"></td>
+            <td onclick="makeMove(1,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="makeMove(2,0)"></td>
+            <td onclick="makeMove(2,1)"></td>
+            <td onclick="makeMove(2,2)"></td>
+        </tr>
+    </table>
+
+    <h2 id="status"></h2>
+    <button onclick="restartGame()" class="restart-btn">Restart</button>
+</div>
+
+<script src="~/js/game.js"></script>

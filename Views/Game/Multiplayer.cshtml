@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Multiplayer";
+}
+
+<div class="game-container">
+    <div class="scoreboard">
+        <div class="player-card" id="player1-card">
+            <div class="icon">⭕</div>
+            <div class="player-info">
+                <h3>Player 1</h3>
+                <p id="player1Wins">0 wins</p>
+            </div>
+        </div>
+        <div class="turn-indicator" id="turnIndicator">Your turn</div>
+        <div class="player-card" id="player2-card">
+            <div class="icon">❌</div>
+            <div class="player-info">
+                <h3>Player 2</h3>
+                <p id="player2Wins">0 wins</p>
+            </div>
+        </div>
+    </div>
+
+    <table id="board" class="tic-tac-toe-board">
+        <tr>
+            <td onclick="makeMove(0,0)"></td>
+            <td onclick="makeMove(0,1)"></td>
+            <td onclick="makeMove(0,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="makeMove(1,0)"></td>
+            <td onclick="makeMove(1,1)"></td>
+            <td onclick="makeMove(1,2)"></td>
+        </tr>
+        <tr>
+            <td onclick="makeMove(2,0)"></td>
+            <td onclick="makeMove(2,1)"></td>
+            <td onclick="makeMove(2,2)"></td>
+        </tr>
+    </table>
+
+    <button onclick="restartGame()" class="restart-btn">Restart</button>
+</div>
+
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/multiplayer.js"></script>
+<script src="~/lib/microsoft-signalr/signalr.min.js"></script>
